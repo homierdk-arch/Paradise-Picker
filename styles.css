@@ -1,0 +1,291 @@
+/* Page Style */
+body{
+font-family:'Poppins', sans-serif;
+margin:0;
+background: linear-gradient(#b2ebf2,#e0f7fa);
+color:#033c44;
+}
+
+/* Header */
+header{
+background:#fff176;
+padding:35px;
+text-align:center;
+}
+
+header h1{
+font-family:'Pacifico', cursive;
+font-size:48px;
+color:#00838f;
+margin:0;
+}
+
+/* Navigation Bar */
+nav{
+background:#00bcd4;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:0 20px;
+font-size:18px;
+font-weight:600;
+text-decoration:none;
+}
+
+nav a:hover{
+color:#fff176;
+}
+
+/* Main Content */
+.container{
+padding:40px;
+max-width:900px;
+margin:auto;
+}
+
+/* Images */
+img{
+width:300px;
+border-radius:12px;
+margin:10px;
+box-shadow:0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Table */
+table{
+border-collapse:collapse;
+margin-top:20px;
+width:100%;
+background:white;
+}
+
+th{
+background:#00bcd4;
+color:white;
+}
+
+table, th, td{
+border:1px solid #033c44;
+padding:10px;
+}
+
+/* Lists */
+ul{
+line-height:1.8;
+}
+
+/* Aside box */
+aside{
+background:#b2ebf2;
+padding:20px;
+margin-top:25px;
+border-left:6px solid #00bcd4;
+border-radius:10px;
+}
+
+/* Contact Form */
+form{
+background:white;
+padding:20px;
+width:350px;
+margin:auto;
+border-radius:12px;
+box-shadow:0 6px 12px rgba(0,0,0,0.2);
+}
+
+input, textarea{
+width:90%;
+padding:8px;
+margin-top:5px;
+margin-bottom:15px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+background:#00bcd4;
+color:white;
+border:none;
+padding:10px 20px;
+font-weight:bold;
+cursor:pointer;
+border-radius:6px;
+}
+
+button:hover{
+background:#00838f;
+}
+
+/* Footer */
+footer{
+background:#00bcd4;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+.image-row{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.image-row img{
+width:250px;
+height:180px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 6px 12px rgba(0,0,0,0.2);
+}
+.button-link{
+display:inline-block;
+background:#00bcd4;
+color:white;
+padding:12px 25px;
+margin-top:15px;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+}
+
+.button-link:hover{
+background:#00838f;
+}
+/* Page background */
+body{
+background: linear-gradient(#b2ebf2, #e0f7fa);
+font-family: 'Poppins', sans-serif;
+}
+
+/* Layout for Top 20 page */
+.page-layout{
+display:flex;
+max-width:1100px;
+margin:auto;
+gap:30px;
+padding:30px;
+align-items:flex-start;
+}
+
+/* Main content */
+main{
+flex:3;
+background:white;
+padding:25px;
+border-radius:10px;
+}
+
+/* Sidebar */
+.sidebar{
+flex:1;
+background:#b2ebf2;
+padding:20px;
+border-radius:10px;
+}
+
+/* Sidebar items */
+.sidebar-item{
+margin-bottom:25px;
+text-align:center;
+}
+
+/* Sidebar images */
+.sidebar-item img{
+width:100%;
+max-width:220px;
+height:140px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Sidebar text */
+.sidebar-item p{
+margin:5px 0 0 0;
+font-size:14px;
+}
+.info-box{
+background:#ffffff;
+padding:20px;
+border-radius:15px;
+border:3px solid #00bcd4;
+margin-top:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+.destination-button{
+background:#00bcd4;
+color:white;
+padding:14px 28px;
+border:none;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin-top:15px;
+}
+
+.destination-button:hover{
+background:#00838f;
+transform:scale(1.05);
+transition:0.3s;
+}
+
+#destination-result{
+margin-top:20px;
+font-size:20px;
+color:#033c44;
+}
+/* Top contact info bar */
+.top-contact{
+background:#00bcd4;
+color:white;
+padding:8px 20px;
+text-align:right;
+font-size:14px;
+}
+
+.top-contact a{
+color:#fff176;
+text-decoration:none;
+}
+
+.top-contact a:hover{
+text-decoration:underline;
+}
+/* Top contact bar */
+.top-contact{
+background:#00bcd4;
+color:white;
+padding:8px 20px;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+gap:15px;
+font-size:14px;
+}
+
+/* Links in contact bar */
+.top-contact a{
+color:#fff176;
+text-decoration:none;
+}
+
+/* Travel tip button */
+.tip-button{
+background:#00bcd4;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+font-size:13px;
+cursor:pointer;
+}
+
+.tip-button:hover{
+background:#00838f;
+}

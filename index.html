@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Paradise Picker</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="top-contact">
+
+<p>
+<strong>Danica Homier</strong> |
+Email: <a href="mailto:homierdk@miamioh.edu">homierdk@miamioh.edu</a> |
+Phone: <a href="tel:5555555555">(555) 555-5555</a>
+</p>
+
+<button onclick="showTip()" class="tip-button">Travel Tip</button>
+
+</div>
+<header>
+<h1>Paradise Picker</h1>
+<p><b>Your guide to finding the perfect vacation destination</b></p>
+</header>
+<section>
+
+<h2>Beautiful Places to Explore</h2>
+
+<div class="image-row">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Tropical beach">
+
+
+
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountain lake scenery">
+
+<img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1" alt="Beach sunset">
+
+</div>
+
+</section>
+<nav>
+<a href="index.html">Home</a>
+<a href="destination.html">Destinations</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+<section>
+
+<h2>Welcome to Paradise Picker</h2>
+<h2>Not Sure Where to Travel?</h2>
+<p>Click the button below and let Paradise Picker choose a destination for you!</p>
+<p>
+    Our Paradise Picker button has been a huge help for all sorts of people. It is perfect to use if you are indecisive on where to go on vacation. This tool has also been so perfect for people who love to go all over the world and are open to new possibilities. With paradise picker, your vacation options are endless! Use this button and plan your newest spot next. Also, fun tip from our team to you, Bali has been our most loved vacation spot, if that helps your vacation decision!
+</p>
+<button onclick="pickDestination()" class="destination-button">
+Pick My Paradise 🌴
+</button>
+
+<p id="destination-result"></p>
+
+<p>
+Paradise Picker is a travel website designed to help people discover amazing vacation destinations around the world. Many travelers struggle to decide where they want to go on their next trip, especially with so many beautiful places to choose from. This website makes it easier by highlighting several destinations and explaining what makes each one special. Whether someone enjoys relaxing on beaches, exploring cities, or experiencing new cultures, Paradise Picker helps guide them in the right direction. Our goal is to make planning a vacation less stressful and more exciting. Traveling allows people to experience new environments, food, and traditions that they may never encounter at home. Because of this, choosing the right destination is an important step in creating unforgettable memories. With Paradise Picker, visitors can start their travel journey with helpful information and inspiration.
+</p>
+
+
+</section>
+
+
+</div>
+
+<footer>
+<p><u>Paradise Picker Travel Guide</u> | It's always time for Vacation!</p>
+</footer>
+
+
+
+<script>
+function pickDestination(){
+
+let destinations = [
+"Bali, Indonesia",
+"Paris, France",
+"Maldives",
+"Hawaii, USA",
+"Rome, Italy",
+"Santorini, Greece",
+"Tokyo, Japan",
+"Barcelona, Spain",
+"Dubai, UAE",
+"New York City, USA",
+"London, England",
+"Phuket, Thailand",
+"Banff National Park, Canada",
+"Amalfi Coast, Italy",
+"Sydney, Australia",
+"Reykjavik, Iceland",
+"Cape Town, South Africa",
+"Costa Rica",
+"Fiji",
+"Bora Bora"
+];
+
+let randomPlace = destinations[Math.floor(Math.random() * destinations.length)];
+
+document.getElementById("destination-result").innerHTML =
+"<b>Your Paradise Pick:</b> " + randomPlace;
+
+}
+</script>
+<script>
+function showTip(){
+alert("Travel Tip: Try traveling during the shoulder season for fewer crowds and cheaper prices!");
+}
+</script>
+
+</body>
+</html>
