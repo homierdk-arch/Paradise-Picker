@@ -29,6 +29,7 @@ Phone: <a href="tel:5555555555">(555) 555-5555</a>
 <a href="index.html">Home</a>
 <a href="destination.html">Destinations</a>
 <a href="contact.html">Contact</a>
+<a href="materialize.html">Materialize</a>
 </nav>
 
 <div class="container">
@@ -46,21 +47,25 @@ If you would like to contact the Paradise Picker team, you can use the form belo
 
 <h3>Contact Form</h3>
 
-<form>
+<form id="contactForm">
 
 <label>Name</label><br>
-<input type="text"><br>
+<input type="text" id="name"><br>
 
 <label>Email</label><br>
-<input type="email"><br>
+<input type="email" id="email"><br>
+
+<label>Phone</label><br>
+<input type="text" id="phone"><br>
 
 <label>Message</label><br>
-<textarea rows="4"></textarea><br>
+<textarea id="message"></textarea><br>
 
 <button type="submit">Send Message</button>
 
 </form>
 
+<p id="form-response"></p>
 </section>
 
 </div>
@@ -78,6 +83,26 @@ function showTip(){
 alert("Travel Tip: Try traveling during the shoulder season for fewer crowds and cheaper prices!");
 }
 </script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event){
 
+event.preventDefault(); // stops page from refreshing
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
+let message = document.getElementById("message").value;
+
+// Check if fields are filled
+if(name === "" || email === "" || phone === "" || message === ""){
+document.getElementById("form-response").innerHTML =
+"<span style='color:red;'>Please fill out all fields.</span>";
+}
+else{
+document.getElementById("form-response").innerHTML =
+"<span style='color:green;'>Thank you! Your message has been sent.</span>";
+}
+});
+</script>
 </body>
 </html>
