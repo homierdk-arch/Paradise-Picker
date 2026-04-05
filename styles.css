@@ -289,3 +289,7 @@ cursor:pointer;
 .tip-button:hover{
 background:#00838f;
 }
+#form-response{
+margin-top:15px;
+font-weight:bold;
+}
