@@ -16,24 +16,20 @@ font-family:'Poppins', sans-serif;
 background: linear-gradient(#b2ebf2,#e0f7fa);
 }
 
-/* Title font */
 .brand-logo{
 font-family:'Pacifico', cursive;
 }
 
-/* Hero section */
 .hero{
 background:#fff176;
 padding:40px;
 text-align:center;
 }
 
-/* Custom button */
 .custom-btn{
 margin-top:20px;
 }
 
-/* Section spacing */
 .section{
 margin-top:30px;
 }
@@ -43,11 +39,10 @@ margin-top:30px;
 
 <body>
 
-
+<!-- NAVBAR -->
 <nav class="cyan darken-2">
 <div class="nav-wrapper container">
 
-<!-- Logo now links to home -->
 <a href="index.html" class="brand-logo">Paradise Picker</a>
 
 <ul class="right">
@@ -60,7 +55,7 @@ margin-top:30px;
 </div>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <div class="hero">
 <h3>Explore Your Dream Vacation</h3>
 <p>Paradise Picker helps you find the best destinations around the world.</p>
@@ -68,47 +63,50 @@ margin-top:30px;
 <a class="waves-effect waves-light btn cyan custom-btn">Get Started</a>
 </div>
 
-<!-- SECTION WITH CARDS -->
+<!-- CAROUSEL ⭐ NEW REQUIRED COMPONENT -->
 <div class="container section">
-<div class="row">
 
-<div class="col s12 m4">
-<div class="card">
-<div class="card-image">
-<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21">
-</div>
-<div class="card-content">
-<span class="card-title">Tropical Beach</span>
-<p>Relax on sunny beaches with crystal clear water.</p>
-</div>
-</div>
-</div>
+<h4 class="center">Destination Carousel of Pictures</h4>
 
-<div class="col s12 m4">
-<div class="card">
-<div class="card-image">
-<img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
-</div>
-<div class="card-content">
-<span class="card-title">Santorini</span>
-<p>Beautiful white buildings and ocean views.</p>
-</div>
-</div>
-</div>
-
-<div class="col s12 m4">
-<div class="card">
-<div class="card-image">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-</div>
-<div class="card-content">
-<span class="card-title">Mountain Escape</span>
-<p>Explore nature with breathtaking mountain scenery.</p>
-</div>
-</div>
+<div class="carousel">
+<a class="carousel-item"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"></a>
+<a class="carousel-item"><img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad"></a>
+<a class="carousel-item"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"></a>
+<a class="carousel-item"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"></a>
 </div>
 
 </div>
+
+<!-- COLLAPSIBLE ⭐ NEW REQUIRED COMPONENT -->
+<div class="container section">
+
+<h4 class="center">Travel Info</h4>
+
+<ul class="collapsible">
+
+<li>
+<div class="collapsible-header">Beach Destinations</div>
+<div class="collapsible-body">
+<span>Relax on tropical beaches in places like Bali, Maldives, and Bora Bora. These destinations are perfect for swimming and relaxing.</span>
+</div>
+</li>
+
+<li>
+<div class="collapsible-header">Mountain Adventures</div>
+<div class="collapsible-body">
+<span>Explore Banff, the Alps, and other mountain destinations for hiking, skiing, and scenic views.</span>
+</div>
+</li>
+
+<li>
+<div class="collapsible-header">City Travel</div>
+<div class="collapsible-body">
+<span>Visit cities like Paris, Tokyo, and New York for culture, food, and entertainment.</span>
+</div>
+</li>
+
+</ul>
+
 </div>
 
 <!-- MEDIA SECTION -->
@@ -116,21 +114,23 @@ margin-top:30px;
 
 <h4 class="center">Featured Media</h4>
 
-<!-- Circular Image -->
 <div class="center">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="circle responsive-img" style="width:200px;">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+class="circle responsive-img"
+style="width:200px;">
 <p><b>Tropical Paradise</b></p>
 </div>
 
 <br>
 
-<!-- Video Embed -->
 <div class="video-container">
 <iframe 
 src="https://www.youtube.com/embed/exI_hD_4jAM" 
 frameborder="0" 
 allowfullscreen>
 </iframe>
+</div>
+
 </div>
 
 <!-- FOOTER -->
@@ -140,8 +140,26 @@ allowfullscreen>
 </div>
 </footer>
 
+<!-- jQuery (REQUIRED for Materialize JS) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 <!-- Materialize JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- INIT SCRIPT (THIS MAKES CAROUSEL + COLLAPSIBLE WORK) -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+var carousel = document.querySelectorAll('.carousel');
+M.Carousel.init(carousel, {
+indicators: true
+});
+
+var collapsible = document.querySelectorAll('.collapsible');
+M.Collapsible.init(collapsible);
+
+});
+</script>
 
 </body>
 </html>
