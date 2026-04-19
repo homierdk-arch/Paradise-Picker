@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Paradise Picker - jQuery</title>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:'Poppins', sans-serif;
+background: linear-gradient(#b2ebf2,#e0f7fa);
+margin:0;
+}
+
+/* Navbar */
+nav{
+background:#00acc1;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* Header */
+header{
+text-align:center;
+padding:30px;
+background:#fff176;
+}
+
+/* Sections */
+.section{
+padding:20px;
+text-align:center;
+}
+
+/* Images */
+img{
+width:300px;
+border-radius:10px;
+margin:10px;
+cursor:pointer;
+}
+
+/* Buttons */
+button{
+padding:10px 15px;
+background:#00acc1;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+<a href="index.html">Home</a>
+<a href="destination.html">Destinations</a>
+<a href="contact.html">Contact</a>
+<a href="materialize.html">Materialize</a>
+<a href="jquery.html">jQuery</a>
+</nav>
+
+<!-- HEADER -->
+<header>
+<h1>Paradise Picker - jQuery Page</h1>
+<p>Explore interactive travel features using jQuery.</p>
+</header>
+
+<!-- CONTENT -->
+<div class="section">
+
+<h2>Why Use Paradise Picker?</h2>
+
+<p>
+Paradise Picker helps travelers discover exciting destinations around the world. Whether you are looking for a relaxing beach vacation or an adventurous mountain escape, this site provides helpful inspiration. Users can explore destinations, view images, and interact with features to make planning more fun and engaging. The goal is to create a user-friendly experience that makes travel planning easier.
+</p>
+
+<p>
+This page demonstrates how jQuery can improve a website by adding interactivity. By using simple animations and effects, users can engage more with the content. These features make websites more dynamic and enjoyable to use. Below are some examples of interactive elements that enhance the overall experience.
+</p>
+
+</div>
+
+<!-- 🌴 INTERACTION 1: HIDE/SHOW -->
+<div class="section">
+
+<h2>Toggle Travel Tips</h2>
+
+<button id="toggleBtn">Show/Hide Travel Tips</button>
+
+<p id="tips">
+Travel Tip: Always pack light and plan ahead for your trips!<br><br>
+Keep copies of important documents like your passport and ID.<br><br>
+Learn a few basic phrases in the local language.<br><br>
+Set a daily budget to manage your spending.<br><br>
+Download offline maps before traveling.<br><br>
+Pack versatile clothing for different situations.
+</p>
+
+</div>
+
+<!-- 🌴 INTERACTION 2: FADE IMAGE -->
+<div class="section">
+
+<h2>Click Image to Fade</h2>
+
+<img id="fadeImg" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+
+</div>
+
+<!-- 🌴 INTERACTION 3: SLIDE EFFECT -->
+<div class="section">
+
+<h2>Explore More Destinations</h2>
+
+<button id="slideBtn">Show Destinations</button>
+
+<div id="destinations" style="display:none;">
+
+<p>Bali, Indonesia</p>
+<p>Paris, France</p>
+<p>Maldives</p>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:15px; background:#00acc1; color:white;">
+<p>Paradise Picker | Travel Smart 🌴</p>
+</footer>
+
+<!-- jQuery SCRIPT -->
+<script>
+
+// Toggle text
+$("#toggleBtn").click(function(){
+$("#tips").toggle();
+});
+
+// Fade image
+$("#fadeImg").click(function(){
+$(this).fadeOut(1000).fadeIn(1000);
+});
+
+// Slide down destinations
+$("#slideBtn").click(function(){
+$("#destinations").slideToggle();
+});
+
+</script>
+
+</body>
+</html>
