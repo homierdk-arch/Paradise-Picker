@@ -72,7 +72,7 @@
         <img src="https://picsum.photos/300/200?random=1">
         <h5>Bali, Indonesia</h5>
         <p>Tropical beaches and relaxing vibes.</p>
-        <button class="destination-button">Explore</button>
+        <button class="destination-button" onclick="showDestination('bali')">Explore</button>
       </div>
     </div>
 
@@ -81,8 +81,7 @@
         <img src="https://picsum.photos/300/200?random=2">
         <h5>Swiss Alps</h5>
         <p>Perfect for hiking and scenic views.</p>
-        <button class="destination-button">Explore</button>
-      </div>
+<button class="destination-button" onclick="showDestination('swiss')">Explore</button>      </div>
     </div>
 
     <div class="col-12 col-md-4">
@@ -90,13 +89,13 @@
         <img src="https://picsum.photos/300/200?random=3">
         <h5>New York City</h5>
         <p>Culture, food, and nonstop energy.</p>
-        <button class="destination-button">Explore</button>
+        <button class="destination-button" onclick="showDestination('nyc')">Explore</button>
       </div>
     </div>
 
   </div>
 </div>
-
+<div id="destination-result" class="text-center"></div>
 <!-- ===================== -->
 <!-- EXERCISE 6: MODAL FORM -->
 <!-- ===================== -->
@@ -160,6 +159,20 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function showDestination(place) {
+  let result = document.getElementById("destination-result");
 
+  if (place === "bali") {
+    result.innerHTML = "🌴 Bali is perfect for relaxing beaches, temples, and tropical weather. Great for a peaceful getaway!";
+  } 
+  else if (place === "swiss") {
+    result.innerHTML = "⛰️ The Swiss Alps are ideal for hiking, skiing, and amazing mountain views. Perfect for adventure lovers!";
+  } 
+  else if (place === "nyc") {
+    result.innerHTML = "🌆 New York City offers incredible food, shopping, and entertainment. Perfect for a fast-paced city trip!";
+  }
+}
+</script>
 </body>
 </html>
