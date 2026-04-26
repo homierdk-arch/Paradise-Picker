@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradise Picker - Bootstrap Page</title>
+
+ 
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<header>
+  <h1>Paradise Picker 🌴</h1>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html">Home</a>
+<a href="destination.html">Destinations</a>
+<a href="contact.html">Contact</a>
+<a href="materialize.html">Materialize</a>
+<a href="jquery.html">jQuery</a>
+<a href="bootstrap.html">Explore</a>
+</nav>
+
+<!-- ===================== -->
+<!-- EXERCISE 1: GRID -->
+<!-- ===================== -->
+<div class="container">
+  <h2>Explore Travel Styles</h2>
+
+  <div class="row g-3 mt-3">
+    <div class="col-12 col-md-4">
+      <div class="info-box text-center">
+        🏝️ <h5>Beach</h5>
+        <p>Relax by the ocean with sunshine and waves.</p>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="info-box text-center">
+        ⛰️ <h5>Adventure</h5>
+        <p>Hiking, exploring, and thrilling experiences.</p>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="info-box text-center">
+        🌆 <h5>City</h5>
+        <p>Food, culture, and exciting nightlife.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== -->
+<!-- EXERCISE 5: CARDS -->
+<!-- ===================== -->
+<div class="container">
+  <h2 class="mt-5">Popular Destinations</h2>
+
+  <div class="row g-4 mt-2">
+
+    <div class="col-12 col-md-4">
+      <div class="info-box text-center">
+        <img src="https://picsum.photos/300/200?random=1">
+        <h5>Bali, Indonesia</h5>
+        <p>Tropical beaches and relaxing vibes.</p>
+        <button class="destination-button">Explore</button>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="info-box text-center">
+        <img src="https://picsum.photos/300/200?random=2">
+        <h5>Swiss Alps</h5>
+        <p>Perfect for hiking and scenic views.</p>
+        <button class="destination-button">Explore</button>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="info-box text-center">
+        <img src="https://picsum.photos/300/200?random=3">
+        <h5>New York City</h5>
+        <p>Culture, food, and nonstop energy.</p>
+        <button class="destination-button">Explore</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== -->
+<!-- EXERCISE 6: MODAL FORM -->
+<!-- ===================== -->
+<div class="container text-center mt-5">
+  <h2>Find Your Paradise 🌴</h2>
+
+  <button class="destination-button" data-bs-toggle="modal" data-bs-target="#quizModal">
+    Start Travel Quiz
+  </button>
+</div>
+
+<div class="modal fade" id="quizModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <form>
+        <div class="modal-header">
+          <h5 class="modal-title">Travel Quiz</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label class="form-label">Preferred Climate</label>
+            <select class="form-select">
+              <option>Warm</option>
+              <option>Cold</option>
+              <option>Moderate</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Activity Type</label><br>
+            <input type="radio" name="activity"> Relaxing<br>
+            <input type="radio" name="activity"> Adventure<br>
+            <input type="radio" name="activity"> City Exploring
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Budget ($)</label>
+            <input type="number" class="form-control" placeholder="Enter budget">
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="button-link" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="destination-button">Get Results</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Paradise Picker | Find your perfect getaway 🌍</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
