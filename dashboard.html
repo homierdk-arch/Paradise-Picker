@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Paradise Picker</title>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>Paradise Picker 🌴</h1>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="destination.html">Destinations</a>
+  <a href="top20.html">Top Picks</a>
+  <a href="bootstrap.html">Explore</a>
+  <a href="quiz.html">Find Your Paradise</a>
+  <a href="dashboard.html" style="color:#fff176;">Dashboard</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+  <h2 class="text-center mb-4">Your Travel Dashboard ✈️</h2>
+
+  <!-- ROW 1 -->
+  <div class="row g-4">
+
+    <!-- Suggested Destination -->
+    <div class="col-md-6">
+      <div class="info-box text-center">
+        <h3>🌴 Suggested Destination</h3>
+        <p id="suggested-destination">Click below to get your match!</p>
+        <button class="destination-button" onclick="generateDestination()">Get Suggestion</button>
+      </div>
+    </div>
+
+    <!-- Travel Preferences -->
+    <div class="col-md-6">
+      <div class="info-box">
+        <h3>🧳 Your Preferences</h3>
+        <ul>
+          <li>Climate: Warm</li>
+          <li>Style: Adventure</li>
+          <li>Budget: $$$</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="row g-4 mt-2">
+
+    <!-- Favorites -->
+    <div class="col-md-6">
+      <div class="info-box">
+        <h3>⭐ Favorite Destinations</h3>
+        <ul>
+          <li>Bali</li>
+          <li>Hawaii</li>
+          <li>Italy</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Travel Tips -->
+    <div class="col-md-6">
+      <div class="info-box text-center">
+        <h3>💡 Travel Tip</h3>
+        <p id="travel-tip">Click for a helpful tip!</p>
+        <button class="tip-button" onclick="showTip()">Get Tip</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ROW 3: CHART -->
+  <div class="row g-4 mt-2">
+    <div class="col-12">
+      <div class="info-box text-center">
+        <h3>📊 Travel Preferences Overview</h3>
+        <canvas id="travelChart" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Paradise Picker | Your travel companion 🌍</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- CUSTOM JS -->
+<script>
+function generateDestination() {
+  const options = [
+    "🌴 Bali – Relaxing beaches and temples",
+    "⛰️ Swiss Alps – Adventure and hiking",
+    "🌆 New York City – Food and nightlife",
+    "🏝️ Hawaii – Tropical paradise vibes"
+  ];
+
+  const random = Math.floor(Math.random() * options.length);
+  document.getElementById("suggested-destination").innerHTML = options[random];
+}
+
+function showTip() {
+  const tips = [
+    "Book flights early to save money ✈️",
+    "Travel during off-season for fewer crowds 🌍",
+    "Always check the weather before packing 🌦️",
+    "Keep digital copies of important documents 📄"
+  ];
+
+  const random = Math.floor(Math.random() * tips.length);
+  document.getElementById("travel-tip").innerHTML = tips[random];
+}
+
+/* CHART */
+const ctx = document.getElementById('travelChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Beach', 'Adventure', 'City', 'Relaxation'],
+    datasets: [{
+      label: 'User Interest Level',
+      data: [8, 6, 7, 9],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 2
+        }
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>
